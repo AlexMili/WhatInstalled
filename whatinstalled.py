@@ -37,11 +37,13 @@ keywords = {\
 	],\
 }
 
-if __name__ == '__main__':
-	parser = argparse.ArgumentParser(description='Retrieve what you installed on your system using bash history')
+def whatinstalled():
+	parser = argparse.ArgumentParser(description='A simple tool to retrieve what you installed using CLI')
 	parser.add_argument('-f', '--file',		dest='bash_file', 	type=str, help="custom file to parse", 		default="~/.bash_history")
 	parser.add_argument('-p', '--profile',	dest='profile', 	type=str, help="specific profile to use",	default=None)
 	args = parser.parse_args()
+
+	global keywords
 
 	history_file = os.path.expanduser(args.bash_file)
 	f = open(history_file,"r")
@@ -57,3 +59,6 @@ if __name__ == '__main__':
 			for item in keywords[category]:
 				if item in line:
 					print("["+category+"//"+item+"]"+str(line[:-1]))
+
+if __name__ == '__main__':
+	whatinstalled()
