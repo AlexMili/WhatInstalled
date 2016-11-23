@@ -39,8 +39,8 @@ keywords = {\
 
 def whatinstalled():
 	parser = argparse.ArgumentParser(description='A simple tool to retrieve what you installed using CLI')
-	parser.add_argument('-f', '--file',		dest='bash_file', 	type=str, help="custom file to parse", 		default="~/.bash_history")
-	parser.add_argument('-p', '--profile',	dest='profile', 	type=str, help="specific profile to use",	default=None)
+	parser.add_argument('-f', '--file',			dest='bash_file', 	type=str,	help="custom file to parse", 	default="~/.bash_history")
+	parser.add_argument('-p', '--profile',		dest='profile', 	type=str,	help="specific profile to use",	default=None)
 	args = parser.parse_args()
 
 	global keywords
@@ -58,7 +58,7 @@ def whatinstalled():
 		for category in keywords:
 			for item in keywords[category]:
 				if item in line:
-					print("["+category+"//"+item+"]"+str(line[:-1]))
+					print("["+category+"]"+str(line[:-1]))
 
 if __name__ == '__main__':
 	whatinstalled()
