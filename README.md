@@ -2,7 +2,11 @@
 WhatInstalled is a simple tool to retrieve what you installed using command line.
 
 ## Installation
-After cloning this repository simply run :
+You can install it with pip :
+```bash
+pip install whatinstalled
+```
+Or clone this repository and simply run :
 ```bash
 cd whatinstalled/
 pip install -e .
