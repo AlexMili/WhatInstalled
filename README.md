@@ -1,5 +1,23 @@
-# WhatInstalled
-WhatInstalled is a simple tool to retrieve what you installed using command line.
+**WhatInstalled** is a tool to retrieve what you installed using command line.
+Currently these package manager are handled:
+Homebrew
+Macport
+apt-get
+aptitude
+yum
+pacman
+dpkg
+dnf
+zypper
+luarocks
+pip
+easy_install
+conda
+gem
+rvm
+npm
+yarn
+bower
 
 ## Installation
 You can install it with pip :

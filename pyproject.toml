@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "whatinstalled"
+description = "A tool to list all packages ever installed on your machine."
+dynamic = ["version"]
+readme = "README.md"
+authors = [{ name = "Alex Mili" }]
+license = { file = "LICENSE" }
+requires-python = ">=3.3"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+]
+keywords = []
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/AlexMili/WhatInstalled"
+Issues = "https://github.com/AlexMili/WhatInstalled/issues"
+Repository = "https://github.com/AlexMili/WhatInstalled"
+Documentation = "https://github.com/AlexMili/WhatInstalled"
+
+[project.scripts]
+whatinstalled = "whatinstalled.main:whatinstalled"
+
+[tool.hatch.build.targets.wheel]
+packages = ["./src/whatinstalled/"]
+
+[tool.hatch.version]
+path = "src/whatinstalled/VERSION.md"
+pattern = "(?P<version>.*)"
+
+[tool.ruff.lint.isort]
+lines-after-imports = 2
+known-first-party = ["whatinstalled"]
