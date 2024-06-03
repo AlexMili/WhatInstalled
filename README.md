@@ -1,23 +1,25 @@
-**WhatInstalled** is a tool to retrieve what you installed using command line.
+**WhatInstalled** is a tool to list all packages you ever installed on your machine.
 Currently these package manager are handled:
-Homebrew
-Macport
-apt-get
-aptitude
-yum
-pacman
-dpkg
-dnf
-zypper
-luarocks
-pip
-easy_install
-conda
-gem
-rvm
-npm
-yarn
-bower
+- Homebrew
+- Macport
+- luarocks
+- pip
+- pipx
+- gem
+- npm
+- yarn
+
+Comming soon:
+- apt-get
+- aptitude
+- yum
+- pacman
+- dpkg
+- dnf
+- zypper
+- easy_install
+- rvm
+- nvm
 
 ## Installation
 You can install it with pip :
@@ -32,61 +34,16 @@ pip install -e .
 
 ## Usage
 
-You just need to run :
-```bash
-whatinstalled
-```
+```console
+$ whatinstalled --help
+Usage: main.py [OPTIONS]
 
-By default the tool will look in `~/.bash_history`. If you want to specify a different file use the `-f` or `--file` argument :
-```bash
-whatinstalled -f ~/.zsh_history
-```
-
-WhatInstalled allow you to select a specific profile among the following :
-```python
-{
-    "mac":[
-        "brew install",
-        "brew cask install",
-        "port install"
-    ],
-    "linux":[
-        "apt-get install",
-        "aptitude install",
-        "yum install",
-        "pacman install",
-        "dpkg -i",
-        "dnf install",
-        "zypper in",
-        "make install",
-        "tar "
-    ],
-    "lua":[
-        "luarocks install",
-        "luarocks make"
-    ],
-    "python":[
-        "pip install",
-        "easy_install",
-        "conda install"
-    ],
-    "ruby":[
-        "gem install",
-        "rvm install"
-    ],
-    "node":[
-        "npm install",
-        "bower install"
-    ],
-}
-```
-
-Choose a specific profile :
-```bash
-whatinstalled -p python
-```
-Output :
-```bash
-[python] pip
-[python] awscli
+╭─ Options ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ --profile                                  TEXT  Select a given profile among this list: lua,mac,node,python,ruby [default: None]                                               │
+│ --include-system    --no-include-system          Include system packages [default: no-include-system]                                                                           │
+│ --exclude                                  TEXT  Exclude given installers separated by a comma [default: None]                                                                  │
+│ --json              --no-json                    Output to JSON [default: no-json]                                                                                              │
+│ --csv               --no-csv                     Output to CSV [default: no-csv]                                                                                                │
+│ --help                                           Show this message and exit.                                                                                                    │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 ```
