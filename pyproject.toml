@@ -4,18 +4,18 @@ build-backend = "hatchling.build"
 
 [project]
 name = "whatinstalled"
-description = "A tool to list all packages ever installed on your machine."
+description = "List all packages ever installed on your machine."
 dynamic = ["version"]
 readme = "README.md"
 authors = [{ name = "Alex Mili" }]
 license = { file = "LICENSE" }
-requires-python = ">=3.3"
+requires-python = ">=3.8"
 classifiers = [
     "License :: OSI Approved :: MIT License",
     "Intended Audience :: Developers",
 ]
 keywords = []
-dependencies = []
+dependencies = ["typer", "tabulate"]
 
 [project.urls]
 Homepage = "https://github.com/AlexMili/WhatInstalled"
@@ -24,7 +24,7 @@ Repository = "https://github.com/AlexMili/WhatInstalled"
 Documentation = "https://github.com/AlexMili/WhatInstalled"
 
 [project.scripts]
-whatinstalled = "whatinstalled.main:whatinstalled"
+whatinstalled = "whatinstalled.main:app"
 
 [tool.hatch.build.targets.wheel]
 packages = ["./src/whatinstalled/"]

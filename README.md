@@ -44,40 +44,40 @@ whatinstalled -f ~/.zsh_history
 
 WhatInstalled allow you to select a specific profile among the following :
 ```python
-{\
-	"mac":[\
-		"brew install",\
-		"brew cask install",\
-		"port install"\
-	],\
-	"linux":[\
-		"apt-get install",\
-		"aptitude install",\
-		"yum install",\
-		"pacman install",\
-		"dpkg -i",\
-		"dnf install",\
-		"zypper in",\
-		"make install",\
-		"tar "\
-	],\
-	"lua":[\
-		"luarocks install",\
-		"luarocks make"\
-	],\
-	"python":[\
-		"pip install",\
-		"easy_install",\
-		"conda install"\
-	],\
-	"ruby":[\
-		"gem install",\
-		"rvm install"\
-	],
-	"node":[\
-		"npm install",\
-		"bower install"\
-	],\
+{
+    "mac":[
+        "brew install",
+        "brew cask install",
+        "port install"
+    ],
+    "linux":[
+        "apt-get install",
+        "aptitude install",
+        "yum install",
+        "pacman install",
+        "dpkg -i",
+        "dnf install",
+        "zypper in",
+        "make install",
+        "tar "
+    ],
+    "lua":[
+        "luarocks install",
+        "luarocks make"
+    ],
+    "python":[
+        "pip install",
+        "easy_install",
+        "conda install"
+    ],
+    "ruby":[
+        "gem install",
+        "rvm install"
+    ],
+    "node":[
+        "npm install",
+        "bower install"
+    ],
 }
 ```
 
@@ -87,6 +87,6 @@ whatinstalled -p python
 ```
 Output :
 ```bash
-[python]sudo easy_install pip
-[python]pip install awscli
+[python] pip
+[python] awscli
 ```
