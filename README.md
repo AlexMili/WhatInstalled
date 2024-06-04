@@ -1,4 +1,4 @@
-**WhatInstalled** is a tool to list all packages you ever installed on your machine.
+**WhatInstalled** is a tool to list all packages ever installed on your machine.
 Currently these package manager are handled:
 - Homebrew
 - Macport
@@ -38,12 +38,13 @@ pip install -e .
 $ whatinstalled --help
 Usage: main.py [OPTIONS]
 
-╭─ Options ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
-│ --profile                                  TEXT  Select a given profile among this list: lua,mac,node,python,ruby [default: None]                                               │
-│ --include-system    --no-include-system          Include system packages [default: no-include-system]                                                                           │
-│ --exclude                                  TEXT  Exclude given installers separated by a comma [default: None]                                                                  │
-│ --json              --no-json                    Output to JSON [default: no-json]                                                                                              │
-│ --csv               --no-csv                     Output to CSV [default: no-csv]                                                                                                │
-│ --help                                           Show this message and exit.                                                                                                    │
-╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Options ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ --profile                                  TEXT  Select a given profile among this list: lua,mac,node,python,ruby [default: None]   │
+│ --include-system    --no-include-system          Include system packages [default: no-include-system]                               │
+│ --exclude                                  TEXT  Exclude given installers separated by a comma [default: None]                      │
+│ --json              --no-json                    Output to JSON [default: no-json]                                                  │
+│ --csv               --no-csv                     Output to CSV [default: no-csv]                                                    │
+│ --help                                           Show this message and exit.                                                        │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
 ```
