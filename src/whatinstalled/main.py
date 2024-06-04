@@ -1,3 +1,4 @@
+import json
 from typing import Optional
 
 import typer
@@ -25,8 +26,9 @@ def main(
         Optional[str],
         typer.Option(help="Exclude given installers separated by a comma"),
     ] = None,
-    json: Annotated[Optional[bool], typer.Option(help="Output to JSON")] = False,
-    csv: Annotated[Optional[bool], typer.Option(help="Output to CSV")] = False,
+    to_json: Annotated[Optional[bool], typer.Option("--json", help="Output to JSON")] = False,
+    to_csv: Annotated[Optional[bool], typer.Option("--csv", help="Output to CSV")] = False,
+    output: Annotated[Optional[str], typer.Option(help="Save the output in a file")] = None,
 ):
     all_pkgs = []
 
@@ -45,15 +47,21 @@ def main(
         ) and ((len(excluded) > 0 and installer not in excluded) or len(excluded) == 0):
             all_pkgs += globals()[installer].all(excluded)
 
-    if json is True:
-        print(all_pkgs)
-    elif csv is True:
-        print("name;version;source")
+    output_str = ""
+    if to_json is True:
+        output_str = json.dumps(all_pkgs)
+    elif to_csv is True:
+        output_str = "name;version;source\n"
         for pkg in all_pkgs:
-            print(f"{pkg['name']};{pkg['version']};{pkg['source']}")
+            output_str += f"{pkg['name']};{pkg['version']};{pkg['source']}\n"
     else:
-        print(tabulate(all_pkgs))
+        output_str = tabulate(all_pkgs)
 
+    if output is not None:
+        with open(output, "w") as fp:
+            fp.write(output_str)
+    else:
+        print(output_str)
 
 if __name__ == "__main__":
     typer.run(main)
