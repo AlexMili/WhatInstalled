@@ -21,7 +21,12 @@ def pip():
 
     pkgs = json.loads(pkg_output)
 
-    return list(map(lambda x: {**x, "source": "pip"}, pkgs))
+    return list(
+        map(
+            lambda x: {"name": x["name"], "version": x["version"], "source": "pip"},
+            pkgs,
+        )
+    )
 
 
 def pipx():
