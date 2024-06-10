@@ -9,12 +9,12 @@ Currently these package manager are handled:
 - npm
 - yarn
 - dpkg
+- yum
+- dnf
 
 Comming soon:
 - aptitude
-- yum
 - pacman
-- dnf
 - zypper
 - easy_install
 - rvm
