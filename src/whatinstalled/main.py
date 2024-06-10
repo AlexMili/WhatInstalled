@@ -5,7 +5,7 @@ import typer
 from tabulate import tabulate
 from typing_extensions import Annotated
 
-from whatinstalled import lua, mac, node, python, ruby  # noqa: F401
+from whatinstalled import lua, mac, node, python, ruby, linux  # noqa: F401
 
 
 app = typer.Typer(add_completion=False)
@@ -16,7 +16,7 @@ def main(
     profile: Annotated[
         Optional[str],
         typer.Option(
-            help="Select a given profile among this list: lua,mac,node,python,ruby"
+            help="Select a given profile among this list: mac,linux,python,lua,node,ruby"
         ),
     ] = None,
     include_system: Annotated[
@@ -39,7 +39,7 @@ def main(
     if include_system is False and "system" not in excluded:
         excluded.append("system")
 
-    installers = ["python", "mac", "node", "lua", "ruby"]
+    installers = ["mac", "linux", "python", "lua", "node", "ruby"]
 
     for installer in installers:
         if (

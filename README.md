@@ -8,13 +8,12 @@ Currently these package manager are handled:
 - gem
 - npm
 - yarn
+- dpkg
 
 Comming soon:
-- apt-get
 - aptitude
 - yum
 - pacman
-- dpkg
 - dnf
 - zypper
 - easy_install
@@ -38,13 +37,16 @@ pip install -e .
 $ whatinstalled --help
 Usage: main.py [OPTIONS]
 
-╭─ Options ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
-│ --profile                                  TEXT  Select a given profile among this list: lua,mac,node,python,ruby [default: None]   │
-│ --include-system    --no-include-system          Include system packages [default: no-include-system]                               │
-│ --exclude                                  TEXT  Exclude given installers separated by a comma [default: None]                      │
-│ --json              --no-json                    Output to JSON [default: no-json]                                                  │
-│ --csv               --no-csv                     Output to CSV [default: no-csv]                                                    │
-│ --help                                           Show this message and exit.                                                        │
-╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭─ Options ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ --profile                                  TEXT  Select a given profile among this list: mac,linux,python,lua,node,ruby [default: None]       │
+│ --include-system    --no-include-system          Include system packages [default: no-include-system]                                         │
+│ --exclude                                  TEXT  Exclude given installers separated by a comma [default: None]                                │
+│ --json                                           Output to JSON                                                                               │
+│ --csv                                            Output to CSV                                                                                │
+│ --output                                   TEXT  Save the output in a file [default: None]                                                    │
+│ --help                                           Show this message and exit.                                                                  │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
 
 ```
