@@ -1,0 +1,23 @@
+{
+  "corepack": {
+    "current": "0.14.2",
+    "wanted": "0.28.2",
+    "latest": "0.28.2",
+    "dependent": "global",
+    "location": "/Users/UserName/.nvm/versions/node/v18.12.1/lib/node_modules/corepack"
+  },
+  "lighthouse": {
+    "current": "11.4.0",
+    "wanted": "12.0.0",
+    "latest": "12.0.0",
+    "dependent": "global",
+    "location": "/Users/UserName/.nvm/versions/node/v18.12.1/lib/node_modules/lighthouse"
+  },
+  "npm": {
+    "current": "8.19.2",
+    "wanted": "10.8.1",
+    "latest": "10.8.1",
+    "dependent": "global",
+    "location": "/Users/UserName/.nvm/versions/node/v18.12.1/lib/node_modules/npm"
+  }
+}

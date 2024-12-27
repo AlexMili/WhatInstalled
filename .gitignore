@@ -3,3 +3,9 @@ __pycache__
 dist
 *.egg-info
 .pypirc
+.ruff_cache
+.pytest_cache
+.mypy_cache
+.vscode
+.coverage
+coverage.xml

@@ -35,7 +35,7 @@ pip install -e .
 
 ```console
 $ whatinstalled --help
-Usage: main.py [OPTIONS]
+Usage: whatinstalled [OPTIONS]
 
 
 ╭─ Options ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮

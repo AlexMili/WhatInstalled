@@ -1,0 +1,7 @@
+ruff
+mypy
+pytest
+coverage
+
+# Types
+types-tabulate

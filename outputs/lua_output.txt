@@ -1,0 +1,4 @@
+lua-cjson	2.1.0.10-1	installed	/usr/local/lib/luarocks/rocks-5.4
+lua-resty-jwt	0.2.3-0	installed	/usr/local/lib/luarocks/rocks-5.4
+lua-resty-openssl	1.4.0-1	installed	/usr/local/lib/luarocks/rocks-5.4
+luafilesystem	1.8.0-1	installed	/usr/local/lib/luarocks/rocks-5.4

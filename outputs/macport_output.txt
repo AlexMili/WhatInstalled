@@ -1,0 +1,5 @@
+The following ports are currently installed:
+  FTXUI @5.0.0_0 (active)
+  go @1.22.3_0 (active)
+  libfmt9 @9.1.0_0 (active)
+  rgb-tui @1.1_0 (active)

@@ -26,10 +26,16 @@ def main(
         Optional[str],
         typer.Option(help="Exclude given installers separated by a comma"),
     ] = None,
-    to_json: Annotated[Optional[bool], typer.Option("--json", help="Output to JSON")] = False,
-    to_csv: Annotated[Optional[bool], typer.Option("--csv", help="Output to CSV")] = False,
-    output: Annotated[Optional[str], typer.Option(help="Save the output in a file")] = None,
-):
+    to_json: Annotated[
+        Optional[bool], typer.Option("--json", help="Output to JSON")
+    ] = False,
+    to_csv: Annotated[
+        Optional[bool], typer.Option("--csv", help="Output to CSV")
+    ] = False,
+    output: Annotated[
+        Optional[str], typer.Option(help="Save the output in a file")
+    ] = None,
+) -> None:
     all_pkgs = []
 
     excluded = []
@@ -63,5 +69,6 @@ def main(
     else:
         print(output_str)
 
+
 if __name__ == "__main__":
-    typer.run(main)
+    app()
